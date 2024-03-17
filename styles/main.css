@@ -23,20 +23,8 @@ section {
   width: 10rem;
   position: relative;
 }
-.player > #play-button {
+.player > .controls {
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 2rem;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.player > #play-button:hover {
-  background: rgba(0, 0, 0, 0.1);
 }
 .player > .progress {
   width: 100%;
@@ -49,6 +37,26 @@ section {
   transform-origin: 0;
   transform: scaleX(0);
   transition: transform 0.1s;
+}
+
+.controls {
+  display: flex;
+  height: 100%;
+}
+.controls > #play-button {
+  height: 100%;
+  width: 2rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.controls > #play-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.controls > .details {
+  flex-grow: 1;
+  padding: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

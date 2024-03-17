@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "styles": "deno run --allow-read --allow-write npm:sass styles/"
+    "styles": "deno run --allow-read --allow-write npm:sass -w styles/",
+    "dev": "deno run -A npm:serve ./"
   }
 }
