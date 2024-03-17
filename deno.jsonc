@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "styles": "deno run --allow-read --allow-write npm:sass styles/"
+  }
+}
