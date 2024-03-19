@@ -13,7 +13,7 @@
   <body>
     <section>
       <h2>pico-player</h2>
-      <div class="player">
+      <div class="player" data-pico='{"foo": "bar"}'>
         <div class="controls">
           <button id="play-button">▶️</button>
           <span class="details">Title</span>
@@ -24,7 +24,7 @@
         />
       </div>
 
-      <div class="player">
+      <div class="player" data-pico>
         <div class="controls">
           <button id="play-button">▶️</button>
           <span class="details">Title</span>
@@ -34,6 +34,19 @@
           src="https://cdn.freesound.org/previews/727/727745_1015240-lq.mp3"
         />
       </div>
+
+      <div class="player" data-pico>
+        <div class="controls">
+          <button id="play-button">▶️</button>
+          <span class="details">Title</span>
+        </div>
+        <span class="progress"></span>
+        <audio
+          src="https://cdn.freesound.org/previews/727/727912_7037-lq.mp3"
+        />
+      </div>
+
+      <button id="stop-all-button">Stop all</button>
     </section>
   </body>
 </html>

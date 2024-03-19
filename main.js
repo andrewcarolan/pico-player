@@ -1,51 +1,17 @@
-import throttle from "./lib/throttle.js";
+import { createPlayer } from "./lib/player.js";
 
-const startPlayback = (event) => {
-  event.stopPropagation();
+let players = [];
+const playerElements = document.querySelectorAll("[data-pico]");
 
-  if (!isPlaying) {
-    audioElement.play();
-    isPlaying = true;
-    playButton.textContent = "⏸️";
-  } else {
-    audioElement.pause();
-    isPlaying = false;
-    playButton.textContent = "▶️";
-  }
+for (const element of playerElements) {
+  const player = createPlayer(element);
+  players.push(player);
+}
 
-  audioElement.addEventListener(
-    "timeupdate",
-    throttle(updateProgress, UPDATE_INTERVAL)
-  );
-};
+console.log(players);
 
-const updateProgress = (event) => {
-  const { currentTime, duration } = event.target;
+document.querySelector("#stop-all-button").addEventListener("click", () => {
+  players.forEach(({ stopPlayback }) => stopPlayback(0));
+});
 
-  progress = currentTime / duration;
-  progressElement.style.transform = `scaleX(${progress})`;
-};
-
-const setProgress = (event) => {
-  const { offsetX: x, target } = event;
-  const { offsetWidth: width } = target;
-  const { duration } = audioElement;
-
-  const offset = x / width;
-
-  audioElement.currentTime = offset * duration;
-};
-
-const UPDATE_INTERVAL = 100;
-
-let progress = 0;
-let isPlaying = false;
-
-const player = document.querySelector(".player");
-
-const progressElement = player.querySelector(".progress");
-const playButton = player.querySelector("#play-button");
-const audioElement = player.querySelector("audio");
-
-playButton.addEventListener("click", startPlayback);
-player.addEventListener("click", setProgress);
+// const player = document.querySelector(".player");
