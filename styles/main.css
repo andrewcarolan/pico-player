@@ -20,11 +20,15 @@ body {
 section {
   padding: 1rem;
 }
+section > .player {
+  margin-bottom: 1rem;
+}
 
 .player {
   border: 1px solid black;
   height: var(--player-height);
   position: relative;
+  cursor: pointer;
 }
 .player > .controls {
   z-index: 1;
