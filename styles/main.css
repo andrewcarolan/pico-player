@@ -1,3 +1,7 @@
+:root {
+  --player-height: 4rem;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -19,8 +23,7 @@ section {
 
 .player {
   border: 1px solid black;
-  height: 2rem;
-  width: 10rem;
+  height: var(--player-height);
   position: relative;
 }
 .player > .controls {
@@ -38,6 +41,10 @@ section {
   transform: scaleX(0);
   transition: transform 0.1s;
 }
+.player.no-script .controls,
+.player.no-script .progress {
+  display: none;
+}
 
 .controls {
   display: flex;
@@ -45,7 +52,7 @@ section {
 }
 .controls > #play-button {
   height: 100%;
-  width: 2rem;
+  width: var(--player-height);
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -58,6 +65,8 @@ section {
   flex-grow: 1;
   padding: 0.5rem;
   user-select: none;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
