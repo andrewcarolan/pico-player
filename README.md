@@ -1,3 +1,3 @@
 # pico-player
 
-A tiny audio player widget.
+A tiny, pure JavaScript, no-dependency audio player widget.
