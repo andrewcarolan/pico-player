@@ -63,6 +63,9 @@ section {
   > #play-button {
     height: 100%;
     width: var(--player-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: 0;
     cursor: pointer;
