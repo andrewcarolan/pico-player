@@ -11,6 +11,18 @@
     <title>Document</title>
   </head>
   <body>
+    <template id="player-template">
+      <div class="player">
+        <div class="controls">
+          <button id="play-button">▶️</button>
+          <span class="details">
+            <slot name="title">Title</slot>
+          </span>
+        </div>
+        <span class="progress"></span>
+      </div>
+    </template>
+
     <section>
       <h2>pico-player</h2>
       <div class="player no-script" data-pico>
@@ -69,6 +81,11 @@
         </div>
         <span class="progress"></span>
       </div>
+
+      <audio-player>
+        <span slot="title">Hazy</span>
+        <code>audio-player</code> element
+      </audio-player>
     </section>
   </body>
 </html>
