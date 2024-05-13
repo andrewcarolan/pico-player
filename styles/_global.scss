@@ -1,0 +1,26 @@
+:root {
+  --player-height: 4rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+section {
+  padding: 1rem;
+
+  > .player {
+    margin-bottom: 1rem;
+  }
+}
