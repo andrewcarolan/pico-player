@@ -1,6 +1,7 @@
 {
   "tasks": {
     "styles": "deno run -A npm:sass -w styles/",
-    "dev": "deno run -A npm:serve ./"
+    "dev": "deno run -A npm:serve ./",
+    "build": "deno run -A npm:rollup main.js --file dist/bundle.js --format iife"
   }
 }
