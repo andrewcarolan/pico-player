@@ -1,6 +1,6 @@
 .player {
   border: 1px solid black;
-  height: var(--player-height);
+  height: var(--player-height, 4rem);
   position: relative;
   cursor: pointer;
 }
@@ -29,7 +29,10 @@
 }
 .player .controls > #play-button {
   height: 100%;
-  width: var(--player-height);
+  width: var(--player-height, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 0;
   cursor: pointer;
