@@ -1,13 +1,13 @@
-.player {
+.pico-player {
   border: 1px solid black;
   height: var(--player-height, 4rem);
   position: relative;
   cursor: pointer;
 }
-.player > .controls {
+.pico-player > .controls {
   z-index: 1;
 }
-.player > .progress {
+.pico-player > .progress {
   width: 100%;
   position: absolute;
   left: 0;
@@ -19,15 +19,11 @@
   transform: scaleX(0);
   transition: transform 0.1s;
 }
-.player.no-script .controls,
-.player.no-script .progress {
-  display: none;
-}
-.player .controls {
+.pico-player .controls {
   display: flex;
   height: 100%;
 }
-.player .controls > #play-button {
+.pico-player .controls > #play-button {
   height: 100%;
   width: var(--player-height, 4rem);
   display: flex;
@@ -38,10 +34,10 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.player .controls > #play-button:hover {
+.pico-player .controls > #play-button:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.player .controls > .details {
+.pico-player .controls > .details {
   flex-grow: 1;
   padding: 0.5rem;
   user-select: none;

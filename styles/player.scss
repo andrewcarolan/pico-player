@@ -1,4 +1,4 @@
-.player {
+.pico-player {
   border: 1px solid black;
   height: var(--player-height, 4rem);
   position: relative;
@@ -19,13 +19,6 @@
     transform-origin: 0;
     transform: scaleX(0);
     transition: transform 0.1s;
-  }
-
-  &.no-script {
-    .controls,
-    .progress {
-      display: none;
-    }
   }
 
   .controls {

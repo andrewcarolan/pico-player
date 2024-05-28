@@ -8,68 +8,49 @@
 
     <link rel="stylesheet" href="./styles/main.css" />
 
-    <title>Document</title>
+    <title>pico-player</title>
   </head>
   <body>
     <section>
       <h2>pico-player</h2>
-      <div class="player no-script" data-pico>
-        <audio controls>
-          <source
-            src="https://cdn.freesound.org/previews/625/625214_9497060-lq.mp3"
-            type="audio/mpeg"
-          />
-          <a
-            href="https://cdn.freesound.org/previews/625/625214_9497060-lq.mp3"
-            target="_blank"
-          >
-            Audio
-          </a>
-        </audio>
-        <div class="controls">
-          <button id="play-button">▶️</button>
-          <span class="details">Title</span>
-        </div>
-        <span class="progress"></span>
-      </div>
-
-      <div class="player no-script" data-pico>
-        <audio
-          src="https://cdn.freesound.org/previews/727/727745_1015240-lq.mp3"
-          controls
+      <audio controls data-pico='{"title":"Ambience"}'>
+        <source
+          src="https://cdn.freesound.org/previews/625/625214_9497060-lq.mp3"
+          type="audio/mpeg"
+        />
+        <a
+          href="https://cdn.freesound.org/previews/625/625214_9497060-lq.mp3"
+          target="_blank"
         >
-          <a
-            href="https://cdn.freesound.org/previews/727/727745_1015240-lq.mp3"
-            target="_blank"
-          >
-            Audio
-          </a>
-        </audio>
-        <div class="controls">
-          <button id="play-button">▶️</button>
-          <span class="details">Title</span>
-        </div>
-        <span class="progress"></span>
-      </div>
+          Audio
+        </a>
+      </audio>
 
-      <div class="player no-script" data-pico>
-        <audio
-          src="https://cdn.freesound.org/previews/727/727912_7037-lq.mp3"
-          controls
+      <audio
+        src="https://cdn.freesound.org/previews/727/727745_1015240-lq.mp3"
+        controls
+        data-pico
+      >
+        <a
+          href="https://cdn.freesound.org/previews/727/727745_1015240-lq.mp3"
+          target="_blank"
         >
-          <a
-            href="https://cdn.freesound.org/previews/727/727912_7037-lq.mp3"
-            target="_blank"
-          >
-            Audio
-          </a>
-        </audio>
-        <div class="controls">
-          <button id="play-button">▶️</button>
-          <span class="details">Title</span>
-        </div>
-        <span class="progress"></span>
-      </div>
+          Audio
+        </a>
+      </audio>
+
+      <audio
+        src="https://cdn.freesound.org/previews/727/727912_7037-lq.mp3"
+        controls
+        data-pico=""
+      >
+        <a
+          href="https://cdn.freesound.org/previews/727/727912_7037-lq.mp3"
+          target="_blank"
+        >
+          Audio
+        </a>
+      </audio>
     </section>
   </body>
 </html>

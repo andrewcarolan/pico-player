@@ -1,2 +1,18 @@
-@use "./global";
+@use "./reset";
 @use "./player";
+
+:root {
+  --player-height: 4rem;
+}
+
+body {
+  font-family: monospace;
+}
+
+section {
+  padding: 1rem;
+
+  > .pico-player {
+    margin-bottom: 1rem;
+  }
+}
