@@ -1,8 +1,10 @@
 .pico-player {
-  border: 1px solid black;
-  height: var(--player-height, 4rem);
+  height: 100%;
+  width: 100%;
   position: relative;
   cursor: pointer;
+  font-size: 1em;
+  display: flex;
 }
 .pico-player > .controls {
   z-index: 1;
@@ -13,7 +15,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  background: pink;
+  background: var(--pico-progress-style, rgba(0, 0, 0, 0.25));
   z-index: -1;
   transform-origin: 0;
   transform: scaleX(0);
@@ -21,28 +23,41 @@
 }
 .pico-player .controls {
   display: flex;
-  height: 100%;
+  align-items: center;
+  padding: 1em;
 }
 .pico-player .controls > #play-button {
-  height: 100%;
-  width: var(--player-height, 4rem);
   display: flex;
-  align-items: center;
-  justify-content: center;
   background: transparent;
   border: 0;
+  padding: 0.75em;
+  border-radius: 50%;
+  color: inherit;
   cursor: pointer;
   transition: background 0.2s;
+}
+.pico-player .controls > #play-button > svg {
+  height: 1em;
+  width: 1em;
 }
 .pico-player .controls > #play-button:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.pico-player .controls > .details {
+.pico-player > .details {
   flex-grow: 1;
-  padding: 0.5rem;
+  padding: 1em 0;
   user-select: none;
   display: flex;
   align-items: center;
+  min-width: 0;
+}
+.pico-player > .details > .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pico-player svg {
+  fill: currentColor;
 }
 
 /*# sourceMappingURL=player.css.map */
