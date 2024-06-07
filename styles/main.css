@@ -70,6 +70,13 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.pico-player > .time {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
 .pico-player svg {
   fill: currentColor;
 }

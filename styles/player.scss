@@ -65,6 +65,14 @@
     }
   }
 
+  > .time {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+
   svg {
     fill: currentColor;
   }
